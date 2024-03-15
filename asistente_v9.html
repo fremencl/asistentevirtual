@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Asegúrate de incluir los estilos del chat aquí también -->
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+             <img src="https://i.postimg.cc/Kcd2DR4s/Bit-Logo-Solo-2.png" alt="Logo de la Empresa" width="250" height="70">
+        </div>
+    </div>
+
+    <div id="mainContent">
+        <div id="userInteraction">
+            <!-- Secciones de entrada de texto y audio, ajusta según tus necesidades -->
+            <div id="textInputSection">
+                <h3>Escribe aquí tu pregunta:</h3>
+                <label for="userMessage">Tu Pregunta:</label>
+                <input type="text" id="userMessage" maxlength="100" />
+                <button id="sendButton">Enviar</button>
+            </div>
+            <div id="audioInputSection">
+                <h3>Consulta por Audio:</h3>
+                <button id="startRecording">Iniciar Grabación</button>
+                <button id="stopRecording" disabled>Detener Grabación</button>
+                <button id="playAudio" disabled>Reproducir Audio</button>
+            </div>
+        </div>
+        <div id="virtualAssistantImage">
+            <img src="https://lilgreenland.github.io/images/BMO.jpg" alt="Imagen del Asistente Virtual" width="250" height="250">
+        </div>
+    </div>
+
+    <!-- Sección de Chat -->
+    <section class="msger">
+      <header class="msger-header">
+        <div class="msger-header-title">
+          <i class="fas fa-comment-alt"></i> SUPER ASISTENTE VIRTUAL
+        </div>
+        <div class="msger-header-options">
+          <span><i class="fas fa-cog"></i></span>
+        </div>
+      </header>
+
+      <main class="msger-chat" id="chatbox">
+        <!-- Aquí se mostrarán las respuestas del chatbot en texto -->
+      </main>
+
+      <form class="msger-inputarea">
+        <input type="text" class="msger-input" placeholder="Escribe tu mensaje aquí..." id="userMessageInput">
+        <button type="submit" class="msger-send-btn">Enviar</button>
+      </form>
+    </section>
+
+    <div id="footer">
+        <button id="finalizarConversacion">Finalizar conversación</button>
+    </div>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
